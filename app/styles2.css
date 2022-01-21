@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e5e5e5;
+    display: flex;
+    padding-top: 5rem;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0;
+}
+
+.row {
+    display: flex;
+    width: 900px;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.col-header {
+    box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
+    width: 120px;
+    padding: 0.8rem 1rem;
+    color: #fff;
+    border: 5px solid #eee;
+    height: 180px;
+    margin-bottom: 25px;
+}
+
+.item {
+    background: url('https://images.unsplash.com/photo-1560472355-536de3962603?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 100px;
+    border: 1px solid #eee;
+    padding: 0.8rem 1rem;
+    color: transparent;
+    text-align: center;
+    cursor: grab;
+}
+
+.item:active {
+    cursor: grabbing;
+}
+
+.placeholder {
+    width: 80px;
+    height: 60px;
+}
+
+.start {
+    background: url('https://images.unsplash.com/photo-1623595119708-26b1f7300075?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=683&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.progress {
+    background: url('https://images.unsplash.com/photo-1549395156-e0c1fe6fc7a5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;}
+
+.done {
+    background: url('https://images.unsplash.com/photo-1529688499411-262f191fe29e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;}
+
+.hold {
+    background: #fff;
+    color: #000;
+}
+
+.hide {
+    display: none;
+}
+
+.hovered {
+    background: #B0E0E6;
+    box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
+    width: 140px;
+    height: 120px;
+}

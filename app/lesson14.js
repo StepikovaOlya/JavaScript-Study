@@ -41,18 +41,24 @@ sendRequest('POST', requestURL, body)
     .catch(err => console.log(err))
 
 
-$.ajax(requestURL, {
-    success: function (data) {
-        console.log(data);
-        data.forEach(el => {
-            const test = document.createElement('div');
-            test.className = el.name;
-            test.id = el.id;
-            test.style.width = test.style.height = el.id *10 + 'px';
+// ajax
 
-            (+test.id % 2 === 0) ? test.style.background = 'blue' : test.style.background = 'red';
-
-            document.querySelector('body').appendChild(test);
-        })
-    }
+$(function () {
+    $('#button').on('click', function () {
+        $.ajax(requestURL, {
+            success: function (data) {
+                data.forEach(el => {
+                    const test = document.createElement('div');
+                    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+                    test.textContent = el.name;
+                    test.id = el.id;
+                    test.style.width = test.style.height = 100 + 'px';
+                    test.style.background = '#' + randomColor;
+                    test.style.display = 'inline-block';
+                    // (+test.id % 2 === 0) ? test.style.background = 'blue' : test.style.background = 'red';
+                    document.querySelector('body').appendChild(test);
+                })
+            }
+        });
+    });
 });
